@@ -1,0 +1,53 @@
+Implement Stack using array
+
+public class Stack{
+
+int size;
+int top;
+int[] arr;
+
+public Stack(int size){
+this.size=size;
+top=-1;
+arr=new int[size];
+
+}
+
+public void push(int x){
+if(top==arr.length){
+System.out.println("Overflow situation");
+return;
+}
+
+arr[++top]=x;
+}
+
+public int pop(){
+if(top<0){
+System.out.println("Underflow situation");
+return -1;
+}
+
+int curr=arr[top];
+top--;
+
+return curr;
+
+}
+
+public int peek(){
+if(top<0){
+System.out.println("Underflow situation");
+return -1;
+}
+
+return arr[top];
+
+}
+
+public boolean isEmpty(){
+return top==-1;
+}
+
+
+
