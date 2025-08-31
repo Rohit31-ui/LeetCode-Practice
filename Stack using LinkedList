@@ -1,0 +1,47 @@
+Stack using Linked List
+
+public class Stack{
+
+class Node{
+int data;
+Node next;
+
+public Node(int data){
+ this.data=data;
+  this.next=next;
+
+}
+
+Node head;
+
+public void push(int x){
+  Node curr=new Node(x);
+  curr.next=head;
+  head=curr;
+}
+
+public int pop(){
+if(head==null){
+  System.out.println("Stack is empty");
+  return -1;
+}
+
+int val=head.data;
+head=head.next;
+return val;
+}
+
+public int peek(){
+if(head==null){
+  System.out.println("Stack is empty");
+  return -1;
+}
+
+return head.data;
+}
+
+public boolean isEmpty(){
+  return head==null? true:false;
+}
+
+
